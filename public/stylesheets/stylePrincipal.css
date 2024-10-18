@@ -1,6 +1,5 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
     padding-top: 50px;
 }
 
@@ -9,10 +8,11 @@ body {
     justify-content: space-between;
     align-items: center;
     background-color: black;
-    padding: 10px 20px;
     position: fixed;
-    top: 0;
     width: 100%;
+    padding: 10px 20px;
+    top: 0;
+    font-size: 20px;
 }
 
 .logo {
@@ -22,12 +22,11 @@ body {
 }
 
 .logo img {
-    width: 40px;
+    width: 50px;
     margin-right: 10px;
 }
 
 .nav-links {
-    list-style: none;
     display: flex;
     margin: 0;
     padding: 0;
@@ -45,15 +44,12 @@ body {
 }
 
 .nav-links a:hover {
-    color: purple;
+    color: #5c3bff;
 }
 
 
-
-
-
 .container {
-    max-width: 1200px;
+    max-width: 70%;
     margin: 0 auto;
 }
 
@@ -64,13 +60,6 @@ body {
 
 .info h1 {
     font-size: 2.5em;
-    padding: 10px;
-    border-radius: 5px;
-}
-
-.info p {
-    font-size: 1.2em;
-    color: #666;
 }
 
 .gallery {
@@ -83,15 +72,12 @@ body {
 .movie {
     cursor: pointer;
     text-align: center;
-    width: 200px;
 }
 
 .movie img {
     width: 200px;
     height: 300px;
-    object-fit: cover;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: transform 0.2s;
 }
 
@@ -108,18 +94,16 @@ body {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0, 0, 0, 0.8);
 }
 
 .modal-content {
     background-color: #fff;
     margin: 10% auto;
     padding: 20px;
-    border: 5px solid #800080;
+    border: 5px solid black;
     width: 80%;
     max-width: 600px;
     border-radius: 10px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
     text-align: center;
 }
 
@@ -127,26 +111,10 @@ body {
     width: 100%;
     max-width: 200px;
     height: auto;
-    object-fit: cover;
     border-radius: 8px;
-}
-
-.modal-content h2 {
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 40px;
+    border: 5px solid black;
 }
 
 .close {
-    color: #800080;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: #4b0082;
-    text-decoration: none;
-    cursor: pointer;
+    color: white;
 }

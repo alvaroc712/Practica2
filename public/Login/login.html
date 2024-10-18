@@ -9,21 +9,23 @@
     <body>
 
         <h1>MyFilmList</h1>
-
-        <h2>Inicio de sesión</h2>
-        
-        <form id="loginForm" method="post">
-            <input type="text" name="login" placeholder="Usuario" required>
-            <input type="password" name="password" placeholder="Contraseña" required>
-            <div class="container">
-                <input type="checkbox" name="Recordar" value="Recordar" id="chkRecordar">
-                <label for="chkRecordar">Recordar Usuario</label>
-                <input type="submit" value="Enviar">
+        <div class="container">
+            <div class="sesion">
+                <h2>Inicio de sesión</h2>
+            
+                <form id="loginForm" method="post">
+                    <input type="text" name="user" placeholder="Usuario" required><br>
+                    <input type="password" name="password" placeholder="Contraseña" required><br>
+                    <div class="container">
+                        <input type="checkbox" name="Recordar" value="Recordar" id="chkRecordar">
+                        <label for="chkRecordar">Recordar Usuario</label>
+                        <input type="submit" name="login" value="Enviar">
+                    </div>
+                </form>
             </div>
-        </form>
-        <p><a href="registro_usuarios.html">Registrarse</a></p>
-
-        <script src="login.js"></script>
+            <p><a href="registro_usuarios.html">Registrarse</a></p>
+            <script src="login.js"></script>
+        </div>
 
     </body>
 </html>

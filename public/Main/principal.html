@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../stylesheets/stylePrincipal.css">
+        <title>Pagina principal</title>
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="../img/logo.jpg" alt="Logo" />
+                <span>MyFilmList</span>
+            </div>
+            <ul class="nav-links">
+
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="../Login/login.html">Cerrar Sesión</a></li>
+            </ul>
+        </nav>
+
+        <section class="container">
+            <section class="info">
+                <h1>Colección de peliculas</h1>
+                <p>Gestiona tus colecciones de forma fácil rápida, busca entre las películas añadidas por los demás usuarios y amplia tu colección.</p>
+            </section>
+
+            <div class="gallery">
+                <div class="movie" onclick="showDetails('Anabelle', 'Terror', '2023', 'Alvaro', 'AAAAAAAAAAAAA.', '../img/annabelle.jpg')">
+                    <img src="../img/annabelle.jpg" alt="Anabelle">
+                    <h2>Anabelle</h2>
+                </div>
+                <div class="movie" onclick="showDetails('Avatar', 'Ficción', '2022', 'Elias', 'BBBBBBBBBBBB.', '../img/avatar.jpg')">
+                    <img src="../img/avatar.jpg" alt="Avatar">
+                    <h2>Avatar</h2>
+                </div>
+                <div class="movie" onclick="showDetails('Avengers', 'Ficción', '2019', 'Elias', 'AAAAAAAAAAAAA.', '../img/avengers.webp')">
+                    <img src="../img/avengers.webp" alt="Avengers">
+                    <h2>Avengers</h2>
+                </div>
+                <div class="movie" onclick="showDetails('Ghostbusters', 'Comedia', '2003', 'Alvaro', 'CCCCCCCCCCCCCC.', '../img/ghostbusters.jpg')">
+                    <img src="../img/ghostbusters.jpg" alt="Ghostbusters">
+                    <h2>Ghostbusters</h2>
+                </div>
+                <div class="movie" onclick="showDetails('Háblame', 'Comedia', '2021', 'Elias', 'BBBBBBBBBBBB.', '../img/hablame.webp')">
+                    <img src="../img/hablame.webp" alt="Háblame">
+                    <h2>Háblame</h2>
+                </div>
+                <div class="movie" onclick="showDetails('Insidius', 'Terror', '2018', 'Alvaro', 'AAAAAAAAAAAAA.', '../img/insidius.webp')">
+                    <img src="../img/insidius.webp" alt="Insidius">
+                    <h2>Insidius</h2>
+                </div>
+                <div class="movie" onclick="showDetails('Justicia artificial', 'Ficción', '2022', 'Mariano', 'CCCCCCCCCCCCCC.', '../img/justicia artificial.jpg')">
+                    <img src="../img/justicia artificial.jpg" alt="Justicia artificial">
+                    <h2>Justicia artificial</h2>
+                </div>
+                <div class="movie" onclick="showDetails('La monja', 'Terror', '2017', 'Elias', 'BBBBBBBBBBBB.', '../img/la monja.jfif')">
+                    <img src="../img/la monja.jfif" alt="La monja">
+                    <h2>La monja</h2>
+                </div>
+                <div class="movie" onclick="showDetails('La virgen roja', 'Drama', '2021', 'Alvaro', 'CCCCCCCCCCCCCC.', '../img/la virgen roja.jpg')">
+                    <img src="../img/la virgen roja.jpg" alt="Avatar">
+                    <h2>La virgen roja</h2>
+                </div>
+                <div class="movie" onclick="showDetails('Misión imposible', 'Acción', '2012', 'Mariano', 'AAAAAAAAAAAAA.', '../img/mision imposible.jpg')">
+                    <img src="../img/mision imposible.jpg" alt="Misión imposible">
+                    <h2>Misión imposible</h2>
+                </div>
+                <div class="movie" onclick="showDetails('Odio el verano', 'Drama', '2016', 'Elias', 'BBBBBBBBBBBB.', '../img/odio el verano.jpg')">
+                    <img src="../img/odio el verano.jpg" alt="Odio el verano">
+                    <h2>Odio el verano</h2>
+                </div>
+                <div class="movie" onclick="showDetails('10 vidas', 'Comedia', '2014', 'Alvaro', 'CCCCCCCCCCCCCC.', '../img/vidas.jpg')">
+                    <img src="../img/vidas.jpg" alt="10 vidas">
+                    <h2>10 vidas</h2>
+                </div>
+                <div class="movie" onclick="showDetails('Lobezno', 'Acción', '2022', 'Elias', 'BBBBBBBBBBBB.', '../img/wolverine.jfif')">
+                    <img src="../img/wolverine.jfif" alt="Lobezno">
+                    <h2>Lobezno</h2>
+                </div>
+                <div class="movie" onclick="showDetails('Tarot', 'Terror', '2024', 'Mariano', 'AAAAAAAAAAAAA.', '../img/tarot.webp')">
+                    <img src="../img/tarot.webp" alt="Tarot">
+                    <h2>Tarot</h2>
+                </div>
+                <div class="movie" onclick="showDetails('Expediente warren', 'Terror', '2023', 'Elias', 'BBBBBBBBBBBB.', '../img/expediente warren.avif')">
+                    <img src="../img/expediente warren.avif" alt="Expediente warren">
+                    <h2>Expediente warren</h2>
+                </div>
+            
+
+            </div>
+        
+            <div id="modal" class="modal" onclick="closeModal()">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <img id="modal-image" src="" alt="">
+                    <h2 id="modal-title"></h2>
+                    <p><strong>Género:</strong> <span id="modal-genre"></span></p>
+                    <p><strong>Año:</strong> <span id="modal-year"></span></p>
+                    <p><strong>Director:</strong> <span id="modal-director"></span></p>
+                    <p><strong>Descripción:</strong> <span id="modal-description"></span></p>
+                </div>
+            </div>
+        
+            <script src="principal.js"></script>
+        </section>
+
+    </body>
+</html>
